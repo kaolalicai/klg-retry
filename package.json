@@ -1,7 +1,7 @@
 {
   "name": "klg-retry",
   "version": "1.0.0",
-  "description": "retry",
+  "description": "基于retry封装的工具",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

@@ -1,5 +1,4 @@
 import * as retry from 'retry'
-// import logger from 'klg-logger'
 
 export class Retry {
 /**

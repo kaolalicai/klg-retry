@@ -1,5 +1,5 @@
 # klg-retry
-klg retry
+klg retry ：基于retry封装的工具
 
 ## QuickStart
 
