@@ -13,8 +13,17 @@ export class Retry {
     if (typeof func !== 'function') {
       throw new Error(`${func} is not a function`)
     }
-    // options = options || {retries: 15, minTimeout: 1, maxTimeout: 100000000}
-    const operation = retry.operation(options)
+    let opts = {
+      retries: 5,
+      factor: 2,
+      minTimeout: 1000,
+      maxTimeout: Infinity,
+      randomize: false
+    }
+    for (const key in options) {
+      opts[key] = options[key]
+    }
+    const operation = retry.operation(opts)
     return new Promise((resolve, reject) => {
       operation.attempt(function (currentAttempt) {
         func(currentAttempt).then(function (result) {
