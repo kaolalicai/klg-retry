@@ -53,7 +53,7 @@ describe('retry test', function () {
     }
   }, 60000)
 
-  it.only('随机第n(1-10)次成功', async () => {
+  it('随机第n(1-10)次成功', async () => {
     let count = 0
     const retry = new Retry()
     const runCount = Math.ceil(Math.random() * 10)
