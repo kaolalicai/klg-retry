@@ -15,7 +15,6 @@ export class Retry {
     }
     // options = options || {retries: 15, minTimeout: 1, maxTimeout: 100000000}
     const operation = retry.operation(options)
-    console.log(`retryOption: ${JSON.stringify(options)}`)
     return new Promise((resolve, reject) => {
       operation.attempt(function (currentAttempt) {
         func(currentAttempt).then(function (result) {
