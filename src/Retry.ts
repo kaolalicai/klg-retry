@@ -9,7 +9,7 @@ export class Retry {
  * @param options.minTimeout: 第一次重试前等待时间，默认1000ms
  * @param options.maxTimeout: 间隔两次重试的等待时间，默认Infinity
  */
-  async using (func: Function, options?: { retries: number, minTimeout: number, maxTimeout: number }) {
+  async using (func, options?: object) {
     if (typeof func !== 'function') {
       throw new Error(`${func} is not a function`)
     }

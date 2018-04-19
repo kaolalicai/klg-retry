@@ -3,5 +3,4 @@ coverage/
 .nyc_output/
 **.map
 .idea/
-dist/
 package-lock.json
